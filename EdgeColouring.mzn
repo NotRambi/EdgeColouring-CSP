@@ -25,6 +25,10 @@ constraint forall(x in 1..n) (
                    (Edge[x,2]==Edge[y,2]/\Edge[y,1]==Edge[z,2]/\Edge[z,1]==Edge[x,1]) then % i tre archi formano un triangolo  
                    if EdgeColor[x] == EdgeColor[y] then 
                       EdgeColor[y] != EdgeColor[z]
+                   else
+                      if EdgeColor[y] == EdgeColor[z] then
+                         EdgeColor[x] != EdgeColor[y]
+                      endif
                    endif
                 endif
             endif
