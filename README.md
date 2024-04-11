@@ -1,5 +1,7 @@
 # EdgeColouring-CSP
 CSP in MiniZinc che risolve il problema EdgeColouring
 
-Prima definire il grafo nel file ListaEdge.dzn seguendo il formato presente,
-successivamente eseguire da MiniZinc il codice EdgeColouring.mnz
+Come usarlo:
+- Modificare la Matrice di adiacenza nel file GraphToList.py
+- Eseguire il codice python
+- Eseguire su MiniZinc il codice EdgeColouring.mzn
