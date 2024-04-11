@@ -38,4 +38,4 @@ constraint forall(x in 1..n) (
 solve satisfy;
 
 output["\nColor of Edge:\n"];
-output ["Edge_" ++ show(i) ++ " = " ++ show(EdgeColor[i]) ++"\n" | i in 1..n];
+output ["Edge " ++ show(Edge[i, 1]) ++ "-" ++ show(Edge[i, 2]) ++ " = " ++ show(EdgeColor[i]) ++"\n" | i in 1..n];
