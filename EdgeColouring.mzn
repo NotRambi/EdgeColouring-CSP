@@ -4,9 +4,6 @@
 % prendiamo la lista in input dal file ListaEdge.dzn
 include "ListaEdge.dzn";
 
-%output ["n = " ++ show(n) ++"\n"];
-%output ["Edge_" ++ show(i) ++ " = " ++ show(Edge[i, 1]) ++ "-" ++ show(Edge[i, 2]) ++ "\n" | i in 1..n];
-
 % ora creiamo la lista di variabili di assegnare, che rappresentano i colori degli Archi
 array[1..n] of var 1..3: EdgeColor;
 
@@ -37,5 +34,5 @@ constraint forall(x in 1..n) (
 );
 solve satisfy;
 
-output["\nColor of Edge:\n"];
+output["Color of Edge:\n"];
 output ["Edge " ++ show(Edge[i, 1]) ++ "-" ++ show(Edge[i, 2]) ++ " = " ++ show(EdgeColor[i]) ++"\n" | i in 1..n];
