@@ -37,14 +37,15 @@ f.write("];")
 f.close()
 print("\nCONVERSIONE COMPLETATA\n")
 
-import sys 
+import sys
+import argparse
 flagG = False
-for arg in sys.argv:
-    if arg == "GraphToList.py":
-        continue
-    if arg == "-G" or arg == "-g":
-        flagG = True
-        break
+
+argparser = argparse.ArgumentParser()
+argparser.add_argument('-g', '-G', action='store_true')
+args = argparser.parse_args()
+if args.g:
+    flagG = True
 
 # stampa del grafo a partire dalla matrice di adiacenza usando una libreria esterna
         
